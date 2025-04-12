@@ -1,0 +1,100 @@
+{
+  "name": "angular-copilot-prompt",
+  "publisher": "srleecode",
+  "displayName": "Angular copilot prompt",
+  "description": "Makes it easier to prompt github copilot for Angular related development tasks",
+  "repository": "https://github.com/srleecode/angular-copilot-prompt",
+  "version": "1.0.0",
+  "engines": {
+    "vscode": "^1.99.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "icon": "favicon.ico",
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "extensionDependencies": [
+    "github.copilot-chat"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "chatParticipants": [
+      {
+        "id": "srleecode.angular-copilot-prompt-chat",
+        "fullName": "Angular Copilot Prompt",
+        "name": "angular",
+        "description": "Adds appropriate context for Angular related development tasks",
+        "isSticky": true
+      }
+    ],
+    "commands": [
+      {
+        "command": "angular-copilot-prompt.updateTests",
+        "title": "Update tests"
+      }
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "command": "angular-copilot-prompt.updateTests",
+          "when": "resourceScheme == 'file' && (resourcePath =~ /.+\\.component\\.ts$/ || resourcePath =~ /.+\\.service\\.ts$/) ",
+          "group": "5_AngularCopilot@1"
+        }
+      ]
+    },
+    "commandPalette": [
+      {
+        "command": "angular-copilot-prompt.updateTests",
+        "when": "never"
+      }
+    ]
+  },
+  "configuration": {
+    "type": "object",
+    "id": "angular-copilot-prompt",
+    "title": "Angular Copilot Prompt Extension",
+    "properties": {
+      "angular-copilot-prompt:prototypicalComponents": {
+        "type": "array",
+        "description": "List of file paths of components that represent the prototypical components in your project, i.e. the ones you want to generate similar code to. These will be used to provide context to Copilot.",
+        "default": []
+      },
+      "angular-copilot-prompt.prototypicalServices": {
+        "type": "array",
+        "description": "List of file paths of components that represent the prototypical services in your project, i.e. the ones you want to generate similar code to. These will be used to provide context to Copilot.",
+        "default": []
+      },
+      "angular-copilot-prompt.prototypicalStoreServices": {
+        "type": "array",
+        "description": "List of file paths of store services that represent the prototypical store services in your project, i.e. the ones you want to generate similar code to. These will be used to provide context to Copilot.",
+        "default": []
+      },
+      "angular-copilot-prompt.basePrompt": {
+        "type": "string",
+        "default": "You are an AI coding assistant. Your task is to add, rewrite or modify the provided code according to the given instructions. When updating, ensure your response maintains the original code's formatting. Do not test anything private. If you need to remove any code, only do so if you are certain it is no longer necessary."
+      }
+    }
+  },
+  "scripts": {
+    "package": "npx @vscode/vsce package --no-yarn -o angular-copilot-prompt.vsix",
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.99.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "20.x",
+    "@typescript-eslint/eslint-plugin": "^8.28.0",
+    "@typescript-eslint/parser": "^8.28.0",
+    "eslint": "^9.23.0",
+    "typescript": "^5.8.2",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.4.1"
+  }
+}

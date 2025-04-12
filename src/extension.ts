@@ -10,7 +10,7 @@ export function activate(context: ExtensionContext) {
       "srleecode.angular-copilot-prompt-chat",
       handler
     );
-    angularChat.iconPath = Uri.joinPath(context.extensionUri, "favicon.ico");
+    angularChat.iconPath = Uri.joinPath(context.extensionUri, "angular.png");
     const command = commands.registerCommand(
       "angular-copilot-prompt.updateTests",
       (selectedFile: Uri) => updateTests(config, selectedFile)

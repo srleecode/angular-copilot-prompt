@@ -3,24 +3,25 @@ import { workspace, window, Uri, ConfigurationTarget } from "vscode";
 import { Config } from "./model/config.model";
 import { FILE_TYPE_REGEX_MAP, FileType } from "./model/file-type.enum";
 import { DEFAULT_BASE_PROMPT } from "./model/default-base-prompt.const";
+import path, { normalize, resolve } from "path";
 
 export const getExtensionConfig = (): Promise<Config> => {
-  const workspaceConfig = workspace.getConfiguration("angular-copilot-prompt");
+  const workspaceConfig = workspace.getConfiguration("angularCopilotPrompt");
   const basePrompt =
     (workspaceConfig.get("basePrompt") as string) || DEFAULT_BASE_PROMPT;
+  const prototypicalComponents = workspaceConfig.get(
+    "prototypicalComponents"
+  ) as string[];
+  const prototypicalServices = workspaceConfig.get(
+    "prototypicalServices"
+  ) as string[];
+  const prototypicalStoreServices = workspaceConfig.get(
+    "prototypicalStoreServices"
+  ) as string[];
   return Promise.all([
-    getPrototypicalExamples(
-      workspaceConfig.get("prototypicalComponents") as string[],
-      FileType.Component
-    ),
-    getPrototypicalExamples(
-      workspaceConfig.get("prototypicalServices") as string[],
-      FileType.Service
-    ),
-    getPrototypicalExamples(
-      workspaceConfig.get("prototypicalStoreServices") as string[],
-      FileType.StoreService
-    ),
+    getPrototypicalExamples(prototypicalComponents, FileType.Component),
+    getPrototypicalExamples(prototypicalServices, FileType.Service),
+    getPrototypicalExamples(prototypicalStoreServices, FileType.StoreService),
   ]).then(
     ([
       prototypicalComponents,
@@ -57,13 +58,17 @@ const getPrototypicalExamples = async (
   }
   const validFiles: string[] = [];
   const invalidFiles: string[] = [];
-  configFiles.forEach((file) => {
-    if (existsSync(file)) {
-      validFiles.push(file);
-    } else {
-      invalidFiles.push(file);
-    }
-  });
+  configFiles
+    .map((file) =>
+      normalize(workspace.workspaceFolders?.[0].uri.fsPath + "/" + file)
+    )
+    .forEach((file) => {
+      if (existsSync(file)) {
+        validFiles.push(file);
+      } else {
+        invalidFiles.push(file);
+      }
+    });
   if (invalidFiles.length > 0) {
     window.showWarningMessage(
       `The following prototypical files are invalid: ${invalidFiles.join(", ")}`

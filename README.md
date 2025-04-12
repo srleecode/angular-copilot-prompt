@@ -26,7 +26,7 @@ For example if there is an image subfolder under your extension project workspac
 
 This extension contributes the following settings:
 
-- `angular-copilot-prompt:prototypicalComponents`: Relative from root file path list of components that should be loaded as the appropriate context when updating a component.
-- `angular-copilot-prompt:prototypicalServices`: Relative from root file path list of services that should be loaded as the appropriate context when updating a service.
-- `angular-copilot-prompt:prototypicalStoreServices`: Relative from root file path list of store services that should be loaded as the appropriate context when updating a store service.
-- `angular-copilot-prompt.basePrompt`: Base prompt to include in all prompts
+- `angularCopilotPrompt:prototypicalComponents`: Relative from root file path list of components that should be loaded as the appropriate context when updating a component.
+- `angularCopilotPrompt:prototypicalServices`: Relative from root file path list of services that should be loaded as the appropriate context when updating a service.
+- `angularCopilotPrompt:prototypicalStoreServices`: Relative from root file path list of store services that should be loaded as the appropriate context when updating a store service.
+- `angularCopilotPrompt.basePrompt`: Base prompt to include in all prompts

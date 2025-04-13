@@ -16,11 +16,11 @@ This extension provides two features to ease the above issues:
 - chat particpant, which can be asked Angular questions
 - Selectable commands that run a specific prompt with appropriate loaded context.
 
-For example if there is an image subfolder under your extension project workspace:
+### Chat participant
 
-\!\[feature X\]\(images/feature-x.png\)
-
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+<p align="center">
+  <img src="https://raw.githubusercontent.com/srleecode/angular-copilot-prompt/refs/heads/main/gifs/chat-query.gif" alt="Chat participant query" width="500" />
+</p>
 
 ## Extension Settings
 

@@ -4,7 +4,7 @@
   "displayName": "Angular copilot prompt",
   "description": "Makes it easier to prompt github copilot for Angular related development tasks",
   "repository": "https://github.com/srleecode/angular-copilot-prompt",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "engines": {
     "vscode": "^1.99.0"
   },
@@ -25,7 +25,7 @@
         "id": "srleecode.angular-copilot-prompt-chat",
         "fullName": "Angular Copilot Prompt",
         "name": "angular",
-        "description": "Adds appropriate context for Angular related development tasks",
+        "description": "Provides appropriate responses to prompts using the Angular guide docs",
         "isSticky": true
       }
     ],

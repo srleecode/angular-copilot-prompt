@@ -10,7 +10,11 @@ import {
   LanguageModelError,
 } from "vscode";
 import { Config } from "./model/config.model";
+import { GUIDE_SELECTIONS } from "./model/guide-selections.const";
+import { GuideSelection } from "./model/guide-selection.model";
 
+// Waiting on https://github.com/angular/angular/issues/60434 so that this chat particpant can fetch from the Angular docs.
+// As a workaround, it uses a custom generated selection from the Angular guide docs
 export const chatHandler =
   (config: Config): ChatRequestHandler =>
   async (
@@ -25,35 +29,33 @@ export const chatHandler =
     if (previousMessages.length > 0) {
       messages.push(...previousMessages);
     }
-    if (config.basePrompt) {
-      messages.push(LanguageModelChatMessage.User(config.basePrompt));
+    const guideLines = getRelevantGuideLines(request.prompt);
+    if (guideLines.length > 0) {
+      messages.push(LanguageModelChatMessage.Assistant(guideLines.join("\n")));
     }
-    messages.push(
-      LanguageModelChatMessage.User(
-        request.prompt +
-          " " +
-          [
-            ...config.prototypicalComponents,
-            ...config.prototypicalServices,
-            ...config.prototypicalStoreServices,
-            ...config.prototypicalComponentSpecs,
-            ...config.prototypicalServiceSpecs,
-            ...config.prototypicalStoreServiceSpecs,
-          ]
-            .map((file) => `#file:${file.path}`)
-            .join(" ")
-      )
-    );
-    [
-      ...config.prototypicalComponents,
-      ...config.prototypicalServices,
-      ...config.prototypicalStoreServices,
-      ...config.prototypicalComponentSpecs,
-      ...config.prototypicalServiceSpecs,
-      ...config.prototypicalStoreServiceSpecs,
-    ].forEach((file) => response.reference(file));
+    messages.push(LanguageModelChatMessage.User(request.prompt));
     await sendRequest(request, response, messages, token);
   };
+
+const getRelevantGuideLines = (requestPrompt: string): string[] => {
+  const selections: GuideSelection[] = [];
+  requestPrompt
+    .split(" ")
+    .filter((token) => token.length >= 3)
+    .forEach((token) => {
+      GUIDE_SELECTIONS.forEach((guide) => {
+        if (guide.file.includes(token)) {
+          selections.push(guide);
+        }
+      });
+    });
+  selections.sort((a, b) => a.startLine - b.startLine);
+  const uniqueSelections = selections.filter(
+    (selection, index, self) =>
+      index === self.findIndex((s) => s.startLine === selection.startLine)
+  );
+  return uniqueSelections.map((selection) => selection.content);
+};
 
 const getPreviousMessages = (
   context: ChatContext

@@ -31,6 +31,7 @@ function extractFileLines(filePath) {
         }
         currentFile = {
           file: fileName,
+          fullFileName: match[0].replace("FILE: ", ""),
           startLine: lineNumber + 2,
           content: "",
         };

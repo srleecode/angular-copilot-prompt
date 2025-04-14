@@ -29,32 +29,53 @@ export const chatHandler =
     if (previousMessages.length > 0) {
       messages.push(...previousMessages);
     }
-    const guideLines = getRelevantGuideLines(request.prompt);
-    if (guideLines.length > 0) {
-      messages.push(LanguageModelChatMessage.Assistant(guideLines.join("\n")));
+    const guides = getRelevantGuides(request.prompt);
+    if (guides.length > 0) {
+      const guideContent = guides
+        .map((selection) => selection.content)
+        .join("\n");
+      messages.push(LanguageModelChatMessage.Assistant(guideContent));
+      response.markdown(
+        `Read content from the following guides: ${guides
+          .map(
+            (g) =>
+              `[${g.file}](https://github.com/angular/angular/blob/main/${g.fullFileName})`
+          )
+          .join(", ")}\n\n`
+      );
     }
     messages.push(LanguageModelChatMessage.User(request.prompt));
     await sendRequest(request, response, messages, token);
   };
 
-const getRelevantGuideLines = (requestPrompt: string): string[] => {
+const getRelevantGuides = (requestPrompt: string): GuideSelection[] => {
   const selections: GuideSelection[] = [];
-  requestPrompt
+  const promptTokens = requestPrompt
     .split(" ")
-    .filter((token) => token.length >= 3)
-    .forEach((token) => {
+    .filter((token) => token.length >= 3);
+  promptTokens.forEach((token) => {
+    GUIDE_SELECTIONS.forEach((guide) => {
+      if (guide.file.includes(token)) {
+        selections.push(guide);
+      }
+    });
+  });
+  // Ideally, the some of the file titles are matched if not search through the guide content
+  if (selections.length === 0) {
+    promptTokens.forEach((token) => {
       GUIDE_SELECTIONS.forEach((guide) => {
-        if (guide.file.includes(token)) {
+        if (guide.content.includes(token)) {
           selections.push(guide);
         }
       });
     });
+  }
   selections.sort((a, b) => a.startLine - b.startLine);
   const uniqueSelections = selections.filter(
     (selection, index, self) =>
       index === self.findIndex((s) => s.startLine === selection.startLine)
   );
-  return uniqueSelections.map((selection) => selection.content);
+  return uniqueSelections;
 };
 
 const getPreviousMessages = (

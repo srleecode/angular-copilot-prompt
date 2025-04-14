@@ -18,6 +18,8 @@ This extension provides two features to ease the above issues:
 
 ### Chat participant
 
+By default, copilot doesn't know what an Angular resource is as it is a newer feature. Using the @angular chat particpant allows it to correctly answer the question.
+
 <p align="center">
   <img src="https://raw.githubusercontent.com/srleecode/angular-copilot-prompt/refs/heads/main/gifs/chat-query.gif" alt="Chat participant query" width="500" />
 </p>

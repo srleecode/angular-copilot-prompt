@@ -12,11 +12,17 @@ import {
 import { Config } from "./model/config.model";
 import { GUIDE_SELECTIONS } from "./model/guide-selections.const";
 import { GuideSelection } from "./model/guide-selection.model";
+import { getRelevantGuides } from "./guide-search/get-relevant-guides";
+import MiniSearch from "minisearch";
+import { getReadContext } from "./guide-search/get-read-context";
 
 // Waiting on https://github.com/angular/angular/issues/60434 so that this chat particpant can fetch from the Angular docs.
 // As a workaround, it uses a custom generated selection from the Angular guide docs
 export const chatHandler =
-  (config: Config): ChatRequestHandler =>
+  (
+    config: Config,
+    searchEngine: MiniSearch<GuideSelection>
+  ): ChatRequestHandler =>
   async (
     request: ChatRequest,
     context: ChatContext,
@@ -25,58 +31,26 @@ export const chatHandler =
   ) => {
     response.progress("Reading context...");
     const messages: LanguageModelChatMessage[] = [];
-    const previousMessages = getPreviousMessages(context);
-    if (previousMessages.length > 0) {
-      messages.push(...previousMessages);
-    }
-    const guides = getRelevantGuides(request.prompt);
+    const guides = getRelevantGuides(request.prompt, searchEngine);
     if (guides.length > 0) {
-      const guideContent = guides
-        .map((selection) => selection.content)
-        .join("\n");
-      messages.push(LanguageModelChatMessage.Assistant(guideContent));
-      response.markdown(
-        `Read content from the following guides: ${guides
-          .map(
-            (g) =>
-              `[${g.file}](https://github.com/angular/angular/blob/main/${g.fullFileName})`
-          )
-          .join(", ")}\n\n`
+      guides.forEach((g) =>
+        messages.push(LanguageModelChatMessage.Assistant(g.content))
       );
+      response.markdown(getReadContext(guides));
+      messages.push(
+        LanguageModelChatMessage.Assistant(
+          "You have been provided withthe context to answer Angular questions. You know about the latest version of Angular, but you don't know its version or release date"
+        )
+      );
+    } else {
+      const previousMessages = getPreviousMessages(context);
+      if (previousMessages.length > 0) {
+        messages.push(...previousMessages);
+      }
     }
     messages.push(LanguageModelChatMessage.User(request.prompt));
     await sendRequest(request, response, messages, token);
   };
-
-const getRelevantGuides = (requestPrompt: string): GuideSelection[] => {
-  const selections: GuideSelection[] = [];
-  const promptTokens = requestPrompt
-    .split(" ")
-    .filter((token) => token.length >= 3);
-  promptTokens.forEach((token) => {
-    GUIDE_SELECTIONS.forEach((guide) => {
-      if (guide.file.includes(token)) {
-        selections.push(guide);
-      }
-    });
-  });
-  // Ideally, the some of the file titles are matched if not search through the guide content
-  if (selections.length === 0) {
-    promptTokens.forEach((token) => {
-      GUIDE_SELECTIONS.forEach((guide) => {
-        if (guide.content.includes(token)) {
-          selections.push(guide);
-        }
-      });
-    });
-  }
-  selections.sort((a, b) => a.startLine - b.startLine);
-  const uniqueSelections = selections.filter(
-    (selection, index, self) =>
-      index === self.findIndex((s) => s.startLine === selection.startLine)
-  );
-  return uniqueSelections;
-};
 
 const getPreviousMessages = (
   context: ChatContext

@@ -1,5 +1,6 @@
 export const GUIDE_SELECTIONS = [
   {
+    "id": 0,
     "file": "elements",
     "fullFileName": "adev/src/content/guide/elements.md",
     "startLine": 5,
@@ -7,6 +8,7 @@ export const GUIDE_SELECTIONS = [
     "endLine": 173
   },
   {
+    "id": 1,
     "file": "hydration",
     "fullFileName": "adev/src/content/guide/hydration.md",
     "startLine": 177,
@@ -14,6 +16,7 @@ export const GUIDE_SELECTIONS = [
     "endLine": 389
   },
   {
+    "id": 2,
     "file": "image-optimization",
     "fullFileName": "adev/src/content/guide/image-optimization.md",
     "startLine": 393,
@@ -21,6 +24,7 @@ export const GUIDE_SELECTIONS = [
     "endLine": 860
   },
   {
+    "id": 3,
     "file": "incremental-hydration",
     "fullFileName": "adev/src/content/guide/incremental-hydration.md",
     "startLine": 864,
@@ -28,6 +32,7 @@ export const GUIDE_SELECTIONS = [
     "endLine": 1078
   },
   {
+    "id": 4,
     "file": "security",
     "fullFileName": "adev/src/content/guide/security.md",
     "startLine": 1082,
@@ -35,6 +40,7 @@ export const GUIDE_SELECTIONS = [
     "endLine": 1462
   },
   {
+    "id": 5,
     "file": "ssr",
     "fullFileName": "adev/src/content/guide/ssr.md",
     "startLine": 1466,
@@ -42,6 +48,7 @@ export const GUIDE_SELECTIONS = [
     "endLine": 1847
   },
   {
+    "id": 6,
     "file": "zoneless",
     "fullFileName": "adev/src/content/guide/zoneless.md",
     "startLine": 1851,
@@ -49,6 +56,7 @@ export const GUIDE_SELECTIONS = [
     "endLine": 2040
   },
   {
+    "id": 7,
     "file": "complex-sequences",
     "fullFileName": "adev/src/content/guide/animations/complex-sequences.md",
     "startLine": 2044,
@@ -56,6 +64,7 @@ export const GUIDE_SELECTIONS = [
     "endLine": 2188
   },
   {
+    "id": 8,
     "file": "overview",
     "fullFileName": "adev/src/content/guide/animations/overview.md",
     "startLine": 2192,
@@ -63,6 +72,7 @@ export const GUIDE_SELECTIONS = [
     "endLine": 2494
   },
   {
+    "id": 9,
     "file": "reusable-animations",
     "fullFileName": "adev/src/content/guide/animations/reusable-animations.md",
     "startLine": 2498,
@@ -70,6 +80,7 @@ export const GUIDE_SELECTIONS = [
     "endLine": 2535
   },
   {
+    "id": 10,
     "file": "route-animations",
     "fullFileName": "adev/src/content/guide/animations/route-animations.md",
     "startLine": 2539,
@@ -77,6 +88,7 @@ export const GUIDE_SELECTIONS = [
     "endLine": 2698
   },
   {
+    "id": 11,
     "file": "transition-and-triggers",
     "fullFileName": "adev/src/content/guide/animations/transition-and-triggers.md",
     "startLine": 2702,
@@ -84,6 +96,7 @@ export const GUIDE_SELECTIONS = [
     "endLine": 3005
   },
   {
+    "id": 12,
     "file": "advanced-configuration",
     "fullFileName": "adev/src/content/guide/components/advanced-configuration.md",
     "startLine": 3009,
@@ -91,6 +104,7 @@ export const GUIDE_SELECTIONS = [
     "endLine": 3059
   },
   {
+    "id": 13,
     "file": "anatomy-of-components",
     "fullFileName": "adev/src/content/guide/components/anatomy-of-components.md",
     "startLine": 3063,
@@ -98,6 +112,7 @@ export const GUIDE_SELECTIONS = [
     "endLine": 3209
   },
   {
+    "id": 14,
     "file": "content-projection",
     "fullFileName": "adev/src/content/guide/components/content-projection.md",
     "startLine": 3213,
@@ -105,6 +120,7 @@ export const GUIDE_SELECTIONS = [
     "endLine": 3433
   },
   {
+    "id": 15,
     "file": "dom-apis",
     "fullFileName": "adev/src/content/guide/components/dom-apis.md",
     "startLine": 3437,
@@ -112,6 +128,7 @@ export const GUIDE_SELECTIONS = [
     "endLine": 3524
   },
   {
+    "id": 16,
     "file": "host-elements",
     "fullFileName": "adev/src/content/guide/components/host-elements.md",
     "startLine": 3528,
@@ -119,6 +136,7 @@ export const GUIDE_SELECTIONS = [
     "endLine": 3658
   },
   {
+    "id": 17,
     "file": "inheritance",
     "fullFileName": "adev/src/content/guide/components/inheritance.md",
     "startLine": 3662,
@@ -126,6 +144,7 @@ export const GUIDE_SELECTIONS = [
     "endLine": 3772
   },
   {
+    "id": 18,
     "file": "inputs",
     "fullFileName": "adev/src/content/guide/components/inputs.md",
     "startLine": 3776,
@@ -133,6 +152,7 @@ export const GUIDE_SELECTIONS = [
     "endLine": 4173
   },
   {
+    "id": 19,
     "file": "lifecycle",
     "fullFileName": "adev/src/content/guide/components/lifecycle.md",
     "startLine": 4177,
@@ -140,6 +160,7 @@ export const GUIDE_SELECTIONS = [
     "endLine": 4530
   },
   {
+    "id": 20,
     "file": "outputs",
     "fullFileName": "adev/src/content/guide/components/outputs.md",
     "startLine": 4534,
@@ -147,6 +168,7 @@ export const GUIDE_SELECTIONS = [
     "endLine": 4702
   },
   {
+    "id": 21,
     "file": "programmatic-rendering",
     "fullFileName": "adev/src/content/guide/components/programmatic-rendering.md",
     "startLine": 4706,
@@ -154,6 +176,7 @@ export const GUIDE_SELECTIONS = [
     "endLine": 4837
   },
   {
+    "id": 22,
     "file": "queries",
     "fullFileName": "adev/src/content/guide/components/queries.md",
     "startLine": 4841,
@@ -161,6 +184,7 @@ export const GUIDE_SELECTIONS = [
     "endLine": 5298
   },
   {
+    "id": 23,
     "file": "selectors",
     "fullFileName": "adev/src/content/guide/components/selectors.md",
     "startLine": 5302,
@@ -168,6 +192,7 @@ export const GUIDE_SELECTIONS = [
     "endLine": 5451
   },
   {
+    "id": 24,
     "file": "styling",
     "fullFileName": "adev/src/content/guide/components/styling.md",
     "startLine": 5455,
@@ -175,6 +200,7 @@ export const GUIDE_SELECTIONS = [
     "endLine": 5594
   },
   {
+    "id": 25,
     "file": "creating-injectable-service",
     "fullFileName": "adev/src/content/guide/di/creating-injectable-service.md",
     "startLine": 5598,
@@ -182,6 +208,7 @@ export const GUIDE_SELECTIONS = [
     "endLine": 5756
   },
   {
+    "id": 26,
     "file": "dependency-injection-context",
     "fullFileName": "adev/src/content/guide/di/dependency-injection-context.md",
     "startLine": 5760,
@@ -189,6 +216,7 @@ export const GUIDE_SELECTIONS = [
     "endLine": 5835
   },
   {
+    "id": 27,
     "file": "dependency-injection-providers",
     "fullFileName": "adev/src/content/guide/di/dependency-injection-providers.md",
     "startLine": 5839,
@@ -196,6 +224,7 @@ export const GUIDE_SELECTIONS = [
     "endLine": 6053
   },
   {
+    "id": 28,
     "file": "dependency-injection",
     "fullFileName": "adev/src/content/guide/di/dependency-injection.md",
     "startLine": 6057,
@@ -203,6 +232,7 @@ export const GUIDE_SELECTIONS = [
     "endLine": 6203
   },
   {
+    "id": 29,
     "file": "di-in-action",
     "fullFileName": "adev/src/content/guide/di/di-in-action.md",
     "startLine": 6207,
@@ -210,6 +240,7 @@ export const GUIDE_SELECTIONS = [
     "endLine": 6294
   },
   {
+    "id": 30,
     "file": "hierarchical-dependency-injection",
     "fullFileName": "adev/src/content/guide/di/hierarchical-dependency-injection.md",
     "startLine": 6298,
@@ -217,6 +248,7 @@ export const GUIDE_SELECTIONS = [
     "endLine": 7488
   },
   {
+    "id": 31,
     "file": "lightweight-injection-tokens",
     "fullFileName": "adev/src/content/guide/di/lightweight-injection-tokens.md",
     "startLine": 7492,
@@ -224,6 +256,7 @@ export const GUIDE_SELECTIONS = [
     "endLine": 7687
   },
   {
+    "id": 32,
     "file": "overview",
     "fullFileName": "adev/src/content/guide/di/overview.md",
     "startLine": 7691,
@@ -231,6 +264,7 @@ export const GUIDE_SELECTIONS = [
     "endLine": 7722
   },
   {
+    "id": 33,
     "file": "attribute-directives",
     "fullFileName": "adev/src/content/guide/directives/attribute-directives.md",
     "startLine": 7726,
@@ -238,6 +272,7 @@ export const GUIDE_SELECTIONS = [
     "endLine": 7901
   },
   {
+    "id": 34,
     "file": "directive-composition-api",
     "fullFileName": "adev/src/content/guide/directives/directive-composition-api.md",
     "startLine": 7905,
@@ -245,6 +280,7 @@ export const GUIDE_SELECTIONS = [
     "endLine": 8096
   },
   {
+    "id": 35,
     "file": "overview",
     "fullFileName": "adev/src/content/guide/directives/overview.md",
     "startLine": 8100,
@@ -252,6 +288,7 @@ export const GUIDE_SELECTIONS = [
     "endLine": 8450
   },
   {
+    "id": 36,
     "file": "structural-directives",
     "fullFileName": "adev/src/content/guide/directives/structural-directives.md",
     "startLine": 8454,
@@ -259,6 +296,7 @@ export const GUIDE_SELECTIONS = [
     "endLine": 8729
   },
   {
+    "id": 37,
     "file": "dynamic-forms",
     "fullFileName": "adev/src/content/guide/forms/dynamic-forms.md",
     "startLine": 8733,
@@ -266,6 +304,7 @@ export const GUIDE_SELECTIONS = [
     "endLine": 8876
   },
   {
+    "id": 38,
     "file": "form-validation",
     "fullFileName": "adev/src/content/guide/forms/form-validation.md",
     "startLine": 8880,
@@ -273,6 +312,7 @@ export const GUIDE_SELECTIONS = [
     "endLine": 9229
   },
   {
+    "id": 39,
     "file": "overview",
     "fullFileName": "adev/src/content/guide/forms/overview.md",
     "startLine": 9233,
@@ -280,6 +320,7 @@ export const GUIDE_SELECTIONS = [
     "endLine": 9559
   },
   {
+    "id": 40,
     "file": "reactive-forms",
     "fullFileName": "adev/src/content/guide/forms/reactive-forms.md",
     "startLine": 9563,
@@ -287,6 +328,7 @@ export const GUIDE_SELECTIONS = [
     "endLine": 9980
   },
   {
+    "id": 41,
     "file": "template-driven-forms",
     "fullFileName": "adev/src/content/guide/forms/template-driven-forms.md",
     "startLine": 9984,
@@ -294,6 +336,7 @@ export const GUIDE_SELECTIONS = [
     "endLine": 10397
   },
   {
+    "id": 42,
     "file": "typed-forms",
     "fullFileName": "adev/src/content/guide/forms/typed-forms.md",
     "startLine": 10401,
@@ -301,6 +344,7 @@ export const GUIDE_SELECTIONS = [
     "endLine": 10602
   },
   {
+    "id": 43,
     "file": "interceptors",
     "fullFileName": "adev/src/content/guide/http/interceptors.md",
     "startLine": 10606,
@@ -308,6 +352,7 @@ export const GUIDE_SELECTIONS = [
     "endLine": 10804
   },
   {
+    "id": 44,
     "file": "making-requests",
     "fullFileName": "adev/src/content/guide/http/making-requests.md",
     "startLine": 10808,
@@ -315,6 +360,7 @@ export const GUIDE_SELECTIONS = [
     "endLine": 11078
   },
   {
+    "id": 45,
     "file": "overview",
     "fullFileName": "adev/src/content/guide/http/overview.md",
     "startLine": 11082,
@@ -322,6 +368,7 @@ export const GUIDE_SELECTIONS = [
     "endLine": 11103
   },
   {
+    "id": 46,
     "file": "security",
     "fullFileName": "adev/src/content/guide/http/security.md",
     "startLine": 11107,
@@ -329,6 +376,7 @@ export const GUIDE_SELECTIONS = [
     "endLine": 11175
   },
   {
+    "id": 47,
     "file": "setup",
     "fullFileName": "adev/src/content/guide/http/setup.md",
     "startLine": 11179,
@@ -336,6 +384,7 @@ export const GUIDE_SELECTIONS = [
     "endLine": 11289
   },
   {
+    "id": 48,
     "file": "testing",
     "fullFileName": "adev/src/content/guide/http/testing.md",
     "startLine": 11293,
@@ -343,6 +392,7 @@ export const GUIDE_SELECTIONS = [
     "endLine": 11507
   },
   {
+    "id": 49,
     "file": "add-package",
     "fullFileName": "adev/src/content/guide/i18n/add-package.md",
     "startLine": 11511,
@@ -350,6 +400,7 @@ export const GUIDE_SELECTIONS = [
     "endLine": 11566
   },
   {
+    "id": 50,
     "file": "deploy",
     "fullFileName": "adev/src/content/guide/i18n/deploy.md",
     "startLine": 11570,
@@ -357,6 +408,7 @@ export const GUIDE_SELECTIONS = [
     "endLine": 11614
   },
   {
+    "id": 51,
     "file": "example",
     "fullFileName": "adev/src/content/guide/i18n/example.md",
     "startLine": 11618,
@@ -364,6 +416,7 @@ export const GUIDE_SELECTIONS = [
     "endLine": 11638
   },
   {
+    "id": 52,
     "file": "format-data-locale",
     "fullFileName": "adev/src/content/guide/i18n/format-data-locale.md",
     "startLine": 11642,
@@ -371,6 +424,7 @@ export const GUIDE_SELECTIONS = [
     "endLine": 11696
   },
   {
+    "id": 53,
     "file": "import-global-variants",
     "fullFileName": "adev/src/content/guide/i18n/import-global-variants.md",
     "startLine": 11700,
@@ -378,6 +432,7 @@ export const GUIDE_SELECTIONS = [
     "endLine": 11730
   },
   {
+    "id": 54,
     "file": "locale-id",
     "fullFileName": "adev/src/content/guide/i18n/locale-id.md",
     "startLine": 11734,
@@ -385,6 +440,7 @@ export const GUIDE_SELECTIONS = [
     "endLine": 11813
   },
   {
+    "id": 55,
     "file": "manage-marked-text",
     "fullFileName": "adev/src/content/guide/i18n/manage-marked-text.md",
     "startLine": 11817,
@@ -392,6 +448,7 @@ export const GUIDE_SELECTIONS = [
     "endLine": 11917
   },
   {
+    "id": 56,
     "file": "merge",
     "fullFileName": "adev/src/content/guide/i18n/merge.md",
     "startLine": 11921,
@@ -399,6 +456,7 @@ export const GUIDE_SELECTIONS = [
     "endLine": 12079
   },
   {
+    "id": 57,
     "file": "overview",
     "fullFileName": "adev/src/content/guide/i18n/overview.md",
     "startLine": 12083,
@@ -406,6 +464,7 @@ export const GUIDE_SELECTIONS = [
     "endLine": 12139
   },
   {
+    "id": 58,
     "file": "prepare",
     "fullFileName": "adev/src/content/guide/i18n/prepare.md",
     "startLine": 12143,
@@ -413,6 +472,7 @@ export const GUIDE_SELECTIONS = [
     "endLine": 12593
   },
   {
+    "id": 59,
     "file": "translation-files",
     "fullFileName": "adev/src/content/guide/i18n/translation-files.md",
     "startLine": 12597,
@@ -420,6 +480,7 @@ export const GUIDE_SELECTIONS = [
     "endLine": 12869
   },
   {
+    "id": 60,
     "file": "overview",
     "fullFileName": "adev/src/content/guide/ngmodules/overview.md",
     "startLine": 12873,
@@ -427,6 +488,7 @@ export const GUIDE_SELECTIONS = [
     "endLine": 13081
   },
   {
+    "id": 61,
     "file": "overview",
     "fullFileName": "adev/src/content/guide/performance/overview.md",
     "startLine": 13085,
@@ -434,6 +496,7 @@ export const GUIDE_SELECTIONS = [
     "endLine": 13116
   },
   {
+    "id": 62,
     "file": "change-detection",
     "fullFileName": "adev/src/content/guide/pipes/change-detection.md",
     "startLine": 13120,
@@ -441,6 +504,7 @@ export const GUIDE_SELECTIONS = [
     "endLine": 13236
   },
   {
+    "id": 63,
     "file": "overview",
     "fullFileName": "adev/src/content/guide/pipes/overview.md",
     "startLine": 13240,
@@ -448,6 +512,7 @@ export const GUIDE_SELECTIONS = [
     "endLine": 13269
   },
   {
+    "id": 64,
     "file": "precedence",
     "fullFileName": "adev/src/content/guide/pipes/precedence.md",
     "startLine": 13273,
@@ -455,6 +520,7 @@ export const GUIDE_SELECTIONS = [
     "endLine": 13303
   },
   {
+    "id": 65,
     "file": "template",
     "fullFileName": "adev/src/content/guide/pipes/template.md",
     "startLine": 13307,
@@ -462,6 +528,7 @@ export const GUIDE_SELECTIONS = [
     "endLine": 13363
   },
   {
+    "id": 66,
     "file": "transform-data",
     "fullFileName": "adev/src/content/guide/pipes/transform-data.md",
     "startLine": 13367,
@@ -469,6 +536,7 @@ export const GUIDE_SELECTIONS = [
     "endLine": 13430
   },
   {
+    "id": 67,
     "file": "unwrapping-data-observables",
     "fullFileName": "adev/src/content/guide/pipes/unwrapping-data-observables.md",
     "startLine": 13434,
@@ -476,6 +544,7 @@ export const GUIDE_SELECTIONS = [
     "endLine": 13470
   },
   {
+    "id": 68,
     "file": "common-router-tasks",
     "fullFileName": "adev/src/content/guide/routing/common-router-tasks.md",
     "startLine": 13474,
@@ -483,6 +552,7 @@ export const GUIDE_SELECTIONS = [
     "endLine": 14197
   },
   {
+    "id": 69,
     "file": "overview",
     "fullFileName": "adev/src/content/guide/routing/overview.md",
     "startLine": 14201,
@@ -490,6 +560,7 @@ export const GUIDE_SELECTIONS = [
     "endLine": 14230
   },
   {
+    "id": 70,
     "file": "router-reference",
     "fullFileName": "adev/src/content/guide/routing/router-reference.md",
     "startLine": 14234,
@@ -497,6 +568,7 @@ export const GUIDE_SELECTIONS = [
     "endLine": 14432
   },
   {
+    "id": 71,
     "file": "router-tutorial",
     "fullFileName": "adev/src/content/guide/routing/router-tutorial.md",
     "startLine": 14436,
@@ -504,6 +576,7 @@ export const GUIDE_SELECTIONS = [
     "endLine": 14713
   },
   {
+    "id": 72,
     "file": "routing-with-urlmatcher",
     "fullFileName": "adev/src/content/guide/routing/routing-with-urlmatcher.md",
     "startLine": 14717,
@@ -511,6 +584,7 @@ export const GUIDE_SELECTIONS = [
     "endLine": 14853
   },
   {
+    "id": 73,
     "file": "linked-signal",
     "fullFileName": "adev/src/content/guide/signals/linked-signal.md",
     "startLine": 14857,
@@ -518,6 +592,7 @@ export const GUIDE_SELECTIONS = [
     "endLine": 14988
   },
   {
+    "id": 74,
     "file": "overview",
     "fullFileName": "adev/src/content/guide/signals/overview.md",
     "startLine": 14992,
@@ -525,6 +600,7 @@ export const GUIDE_SELECTIONS = [
     "endLine": 15247
   },
   {
+    "id": 75,
     "file": "resource",
     "fullFileName": "adev/src/content/guide/signals/resource.md",
     "startLine": 15251,
@@ -532,6 +608,7 @@ export const GUIDE_SELECTIONS = [
     "endLine": 15367
   },
   {
+    "id": 76,
     "file": "binding",
     "fullFileName": "adev/src/content/guide/templates/binding.md",
     "startLine": 15371,
@@ -539,6 +616,7 @@ export const GUIDE_SELECTIONS = [
     "endLine": 15619
   },
   {
+    "id": 77,
     "file": "control-flow",
     "fullFileName": "adev/src/content/guide/templates/control-flow.md",
     "startLine": 15623,
@@ -546,6 +624,7 @@ export const GUIDE_SELECTIONS = [
     "endLine": 15754
   },
   {
+    "id": 78,
     "file": "defer",
     "fullFileName": "adev/src/content/guide/templates/defer.md",
     "startLine": 15758,
@@ -553,6 +632,7 @@ export const GUIDE_SELECTIONS = [
     "endLine": 16100
   },
   {
+    "id": 79,
     "file": "event-listeners",
     "fullFileName": "adev/src/content/guide/templates/event-listeners.md",
     "startLine": 16104,
@@ -560,6 +640,7 @@ export const GUIDE_SELECTIONS = [
     "endLine": 16205
   },
   {
+    "id": 80,
     "file": "expression-syntax",
     "fullFileName": "adev/src/content/guide/templates/expression-syntax.md",
     "startLine": 16209,
@@ -567,6 +648,7 @@ export const GUIDE_SELECTIONS = [
     "endLine": 16327
   },
   {
+    "id": 81,
     "file": "ng-container",
     "fullFileName": "adev/src/content/guide/templates/ng-container.md",
     "startLine": 16331,
@@ -574,6 +656,7 @@ export const GUIDE_SELECTIONS = [
     "endLine": 16448
   },
   {
+    "id": 82,
     "file": "ng-content",
     "fullFileName": "adev/src/content/guide/templates/ng-content.md",
     "startLine": 16452,
@@ -581,6 +664,7 @@ export const GUIDE_SELECTIONS = [
     "endLine": 16491
   },
   {
+    "id": 83,
     "file": "ng-template",
     "fullFileName": "adev/src/content/guide/templates/ng-template.md",
     "startLine": 16495,
@@ -588,6 +672,7 @@ export const GUIDE_SELECTIONS = [
     "endLine": 16780
   },
   {
+    "id": 84,
     "file": "overview",
     "fullFileName": "adev/src/content/guide/templates/overview.md",
     "startLine": 16784,
@@ -595,6 +680,7 @@ export const GUIDE_SELECTIONS = [
     "endLine": 16834
   },
   {
+    "id": 85,
     "file": "pipes",
     "fullFileName": "adev/src/content/guide/templates/pipes.md",
     "startLine": 16838,
@@ -602,6 +688,7 @@ export const GUIDE_SELECTIONS = [
     "endLine": 17130
   },
   {
+    "id": 86,
     "file": "two-way-binding",
     "fullFileName": "adev/src/content/guide/templates/two-way-binding.md",
     "startLine": 17134,
@@ -609,6 +696,7 @@ export const GUIDE_SELECTIONS = [
     "endLine": 17272
   },
   {
+    "id": 87,
     "file": "variables",
     "fullFileName": "adev/src/content/guide/templates/variables.md",
     "startLine": 17276,
@@ -616,6 +704,7 @@ export const GUIDE_SELECTIONS = [
     "endLine": 17477
   },
   {
+    "id": 88,
     "file": "whitespace",
     "fullFileName": "adev/src/content/guide/templates/whitespace.md",
     "startLine": 17481,
@@ -623,6 +712,7 @@ export const GUIDE_SELECTIONS = [
     "endLine": 17547
   },
   {
+    "id": 89,
     "file": "attribute-directives",
     "fullFileName": "adev/src/content/guide/testing/attribute-directives.md",
     "startLine": 17551,
@@ -630,6 +720,7 @@ export const GUIDE_SELECTIONS = [
     "endLine": 17624
   },
   {
+    "id": 90,
     "file": "code-coverage",
     "fullFileName": "adev/src/content/guide/testing/code-coverage.md",
     "startLine": 17628,
@@ -637,6 +728,7 @@ export const GUIDE_SELECTIONS = [
     "endLine": 17687
   },
   {
+    "id": 91,
     "file": "component-harnesses-overview",
     "fullFileName": "adev/src/content/guide/testing/component-harnesses-overview.md",
     "startLine": 17691,
@@ -644,6 +736,7 @@ export const GUIDE_SELECTIONS = [
     "endLine": 17723
   },
   {
+    "id": 92,
     "file": "component-harnesses-testing-environments",
     "fullFileName": "adev/src/content/guide/testing/component-harnesses-testing-environments.md",
     "startLine": 17727,
@@ -651,6 +744,7 @@ export const GUIDE_SELECTIONS = [
     "endLine": 17788
   },
   {
+    "id": 93,
     "file": "components-basics",
     "fullFileName": "adev/src/content/guide/testing/components-basics.md",
     "startLine": 17792,
@@ -658,6 +752,7 @@ export const GUIDE_SELECTIONS = [
     "endLine": 17975
   },
   {
+    "id": 94,
     "file": "components-scenarios",
     "fullFileName": "adev/src/content/guide/testing/components-scenarios.md",
     "startLine": 17979,
@@ -665,6 +760,7 @@ export const GUIDE_SELECTIONS = [
     "endLine": 18959
   },
   {
+    "id": 95,
     "file": "creating-component-harnesses",
     "fullFileName": "adev/src/content/guide/testing/creating-component-harnesses.md",
     "startLine": 18963,
@@ -672,6 +768,7 @@ export const GUIDE_SELECTIONS = [
     "endLine": 19241
   },
   {
+    "id": 96,
     "file": "debugging",
     "fullFileName": "adev/src/content/guide/testing/debugging.md",
     "startLine": 19245,
@@ -679,6 +776,7 @@ export const GUIDE_SELECTIONS = [
     "endLine": 19264
   },
   {
+    "id": 97,
     "file": "overview",
     "fullFileName": "adev/src/content/guide/testing/overview.md",
     "startLine": 19268,
@@ -686,6 +784,7 @@ export const GUIDE_SELECTIONS = [
     "endLine": 19395
   },
   {
+    "id": 98,
     "file": "pipes",
     "fullFileName": "adev/src/content/guide/testing/pipes.md",
     "startLine": 19399,
@@ -693,6 +792,7 @@ export const GUIDE_SELECTIONS = [
     "endLine": 19429
   },
   {
+    "id": 99,
     "file": "services",
     "fullFileName": "adev/src/content/guide/testing/services.md",
     "startLine": 19433,
@@ -700,6 +800,7 @@ export const GUIDE_SELECTIONS = [
     "endLine": 19564
   },
   {
+    "id": 100,
     "file": "using-component-harnesses",
     "fullFileName": "adev/src/content/guide/testing/using-component-harnesses.md",
     "startLine": 19568,
@@ -707,6 +808,7 @@ export const GUIDE_SELECTIONS = [
     "endLine": 19777
   },
   {
+    "id": 101,
     "file": "utility-apis",
     "fullFileName": "adev/src/content/guide/testing/utility-apis.md",
     "startLine": 19781,

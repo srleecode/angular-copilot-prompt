@@ -13,6 +13,7 @@ function extractFileLines(filePath) {
     });
 
     let lineNumber = 0;
+    let id = 0;
 
     rl.on("line", (line) => {
       lineNumber++;
@@ -30,6 +31,7 @@ function extractFileLines(filePath) {
           fileLines.push(currentFile);
         }
         currentFile = {
+          id: id++,
           file: fileName,
           fullFileName: match[0].replace("FILE: ", ""),
           startLine: lineNumber + 2,

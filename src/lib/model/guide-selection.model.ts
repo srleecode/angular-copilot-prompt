@@ -1,4 +1,5 @@
 export interface GuideSelection {
+  id: number;
   file: string;
   fullFileName: string;
   startLine: number;

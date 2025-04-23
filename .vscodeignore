@@ -16,3 +16,4 @@ tooling
 out/test
 out/**/*.spec*
 gifs
+webpack.config.js

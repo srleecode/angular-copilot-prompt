@@ -10,7 +10,6 @@ import {
   LanguageModelError,
 } from "vscode";
 import { Config } from "./model/config.model";
-import { GUIDE_SELECTIONS } from "./model/guide-selections.const";
 import { GuideSelection } from "./model/guide-selection.model";
 import { getRelevantGuides } from "./guide-search/get-relevant-guides";
 import MiniSearch from "minisearch";
